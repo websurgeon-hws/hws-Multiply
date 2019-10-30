@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         switch self.gameState {
         case .settings: return AnyView(SettingsView())
-        case .running: return AnyView(Text("Running"))
+        case .running: return AnyView(RunningView())
         }
     }
 }
