@@ -13,6 +13,7 @@
 		D0CC1A1523697F7700BC0953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0CC1A1423697F7700BC0953 /* Assets.xcassets */; };
 		D0CC1A1823697F7700BC0953 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0CC1A1723697F7700BC0953 /* Preview Assets.xcassets */; };
 		D0CC1A1B23697F7700BC0953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CC1A1923697F7700BC0953 /* LaunchScreen.storyboard */; };
+		D0CC1A232369829200BC0953 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC1A222369829200BC0953 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D0CC1A1723697F7700BC0953 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0CC1A1A23697F7700BC0953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0CC1A1C23697F7700BC0953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CC1A222369829200BC0953 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D0CC1A0E23697F7700BC0953 /* AppDelegate.swift */,
 				D0CC1A1023697F7700BC0953 /* SceneDelegate.swift */,
 				D0CC1A1223697F7700BC0953 /* ContentView.swift */,
+				D0CC1A222369829200BC0953 /* SettingsView.swift */,
 				D0CC1A1423697F7700BC0953 /* Assets.xcassets */,
 				D0CC1A1923697F7700BC0953 /* LaunchScreen.storyboard */,
 				D0CC1A1C23697F7700BC0953 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CC1A0F23697F7700BC0953 /* AppDelegate.swift in Sources */,
+				D0CC1A232369829200BC0953 /* SettingsView.swift in Sources */,
 				D0CC1A1123697F7700BC0953 /* SceneDelegate.swift in Sources */,
 				D0CC1A1323697F7700BC0953 /* ContentView.swift in Sources */,
 			);
