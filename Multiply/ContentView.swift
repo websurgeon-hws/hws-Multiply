@@ -5,8 +5,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    private enum GameState {
+        case settings
+        case running
+    }
+
+    @State private var gameState = GameState.settings
+    
     var body: some View {
-        Text("Hello World")
+        switch self.gameState {
+        case .settings:
+            return Text("Settings")
+        case .running:
+            return Text("Running")
+        }
     }
 }
 
