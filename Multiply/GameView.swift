@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     private enum GameState {
         case settings
         case running
@@ -20,8 +20,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GameView()
     }
 }
