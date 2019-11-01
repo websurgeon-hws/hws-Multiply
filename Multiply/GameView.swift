@@ -5,19 +5,14 @@
 import SwiftUI
 
 struct GameView: View {
-    enum GameState {
-        case settings
-        case running
-    }
+    @ObservedObject var gameState: GameState = GameState(questionsLimit: 10)
         
-    @State var gameState: GameState = .settings
-
     var body: some View {
         initialView()
     }
     
     private func initialView() -> some View {
-        switch self.gameState {
+        switch self.gameState.screen {
         case .settings: return AnyView(settingsView())
         case .running: return AnyView(runningView())
         }
@@ -25,11 +20,11 @@ struct GameView: View {
     
     private func settingsView() -> some View {
         NavigationView {
-            SettingsView()
+            SettingsView(gameState: self.gameState)
                 .navigationBarTitle("Settings")
                 .navigationBarItems(leading:
                     Button("Start") {
-                        self.gameState = .running
+                        self.gameState.screen = .running
                     }
                 )
         }
@@ -37,22 +32,25 @@ struct GameView: View {
     
     private func runningView() -> some View {
         NavigationView {
-            RunningView()
+            RunningView(gameState: self.gameState)
             .navigationBarTitle("Multiply")
             .navigationBarItems(leading:
                 Button("Settings") {
-                    self.gameState = .settings
+                    self.gameState.screen = .settings
                 }
             )
         }
     }
+    
+    
 }
 
 struct GameView_Previews: PreviewProvider {
+
     static var previews: some View {
         Group {
-            GameView(gameState: .settings)
-            GameView(gameState: .running)
+            GameView(gameState: GameState(screen: .settings))
+            GameView(gameState: GameState(screen: .running))
         }
     }
 }

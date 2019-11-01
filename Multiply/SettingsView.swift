@@ -5,15 +5,26 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @ObservedObject var gameState: GameState
+
     let multiplicationOptions = Array(2...12)
-    @State private var selectedNumberOfQuestions = "10"
     let numberOfQuestions = ["5" , "10", "20", "All"]
-    @State private var selectedMultiplications = Array(2...12)
     
     var body: some View {
-        Form {
+        let selectedNumberOfQuestions = Binding<String>(get: {
+            if let limit = self.gameState.questionsLimit {
+                return "\(limit)"
+            } else {
+                return "All"
+            }
+        }, set: { newValue in
+            self.gameState.questionsLimit = Int(newValue)
+            self.gameState.refresh()
+        })
+                
+        return Form {
             Section(header: Text("Number of questions")) {
-                Picker(selection: self.$selectedNumberOfQuestions,
+                Picker(selection: selectedNumberOfQuestions,
                        label: Text("Number of questions")) {
                     ForEach(self.numberOfQuestions, id: \.self) {
                         Text("\($0)")
@@ -25,13 +36,14 @@ struct SettingsView: View {
                 List {
                     ForEach(self.multiplicationOptions, id: \.self) { number in
                         Button(action: {
-                            if self.selectedMultiplications.contains(number) {
-                                self.selectedMultiplications
+                            if self.gameState.multiplications.contains(number) {
+                                self.gameState.multiplications
                                     .removeAll(where: { $0 == number })
                             } else {
-                                self.selectedMultiplications
+                                self.gameState.multiplications
                                     .append(number)
                             }
+                            self.gameState.refresh()
                         }) {
                             HStack {
                                 Text("x \(number)")
@@ -47,7 +59,7 @@ struct SettingsView: View {
     }
     
     private func selectedView(number: Int) -> some View {
-        if self.selectedMultiplications.contains(number) {
+        if self.gameState.multiplications.contains(number) {
             return AnyView(Image(systemName: "checkmark"))
         }
         return AnyView(Text(""))
@@ -56,6 +68,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(gameState: GameState())
     }
 }

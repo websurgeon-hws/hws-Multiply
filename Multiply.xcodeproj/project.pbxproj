@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0258B34236CCF5900B7847A /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0258B33236CCF5900B7847A /* GameState.swift */; };
+		D0258B36236CCF7500B7847A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0258B35236CCF7500B7847A /* Question.swift */; };
 		D0CC1A0F23697F7700BC0953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC1A0E23697F7700BC0953 /* AppDelegate.swift */; };
 		D0CC1A1123697F7700BC0953 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC1A1023697F7700BC0953 /* SceneDelegate.swift */; };
 		D0CC1A1323697F7700BC0953 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC1A1223697F7700BC0953 /* GameView.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0258B33236CCF5900B7847A /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		D0258B35236CCF7500B7847A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D0CC1A0B23697F7700BC0953 /* Multiply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multiply.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CC1A0E23697F7700BC0953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0CC1A1023697F7700BC0953 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			children = (
 				D0CC1A0E23697F7700BC0953 /* AppDelegate.swift */,
 				D0CC1A1023697F7700BC0953 /* SceneDelegate.swift */,
+				D0258B35236CCF7500B7847A /* Question.swift */,
+				D0258B33236CCF5900B7847A /* GameState.swift */,
 				D0CC1A1223697F7700BC0953 /* GameView.swift */,
 				D0CC1A222369829200BC0953 /* SettingsView.swift */,
 				D0CC1A24236986E600BC0953 /* RunningView.swift */,
@@ -155,7 +161,9 @@
 				D0CC1A0F23697F7700BC0953 /* AppDelegate.swift in Sources */,
 				D0CC1A25236986E700BC0953 /* RunningView.swift in Sources */,
 				D0CC1A232369829200BC0953 /* SettingsView.swift in Sources */,
+				D0258B34236CCF5900B7847A /* GameState.swift in Sources */,
 				D0CC1A1123697F7700BC0953 /* SceneDelegate.swift in Sources */,
+				D0258B36236CCF7500B7847A /* Question.swift in Sources */,
 				D0CC1A1323697F7700BC0953 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
