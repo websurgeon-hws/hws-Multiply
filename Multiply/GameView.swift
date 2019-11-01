@@ -13,6 +13,10 @@ struct GameView: View {
     @State private var gameState = GameState.settings
     
     var body: some View {
+        initialView()
+    }
+    
+    private func initialView() -> some View {
         switch self.gameState {
         case .settings: return AnyView(SettingsView())
         case .running: return AnyView(RunningView())
